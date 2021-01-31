@@ -1,0 +1,23 @@
+#inculde<stdio.h>
+#include<string.h>
+void WriteFile()  
+{
+	char *FileName  
+	FILE *f;   
+	int n,i;  
+	student sv;   	
+	f=fopen(FileName,"ab");   	
+	printf("Nhap vao so luong sinh vien "); 
+	scanf("%d",&n);   	
+	for(i=1;i<=n;i++)  
+	{  
+		printf("Sinh vien thu %i\n",i);   	 	
+		fflush(stdin); 
+		printf(" - Score: ");
+		gets(sv.score);    
+		printf(" - Name: ");
+		gets(sv.name);    
+		fwrite(&sv,sizeof(sv),1,f);  
+	}  
+	fclose(f);  
+}  
